@@ -12,7 +12,7 @@ v1: v1.c
 	$(CC) $< -o ./$@ 
 
 parallel: parallel.c
-	$(MPICC) $< -o ./$@ -lopenblas -lpthread -lm
+	$(MPICC) $< -o ./$@ -lopenblas -lpthread -lm -fopenmp
 
 clean:
 	$(RM) *.o *~ $(EXECUTABLES)
